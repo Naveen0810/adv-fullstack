@@ -1,0 +1,5 @@
+I created new file using fs module
+This is appended text
+
+
+Hello hi
