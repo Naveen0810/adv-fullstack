@@ -1,0 +1,5 @@
+let fs = require("fs");
+console.log(fs);
+fs.writeFile("sample.txt", "This is new Data ", (err) => {
+  console.log(err);
+});

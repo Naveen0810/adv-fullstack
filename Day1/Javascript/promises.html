@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // setTimeout(()=>{
+      //     console.log("Hey this is set interval");
+
+      // }, 3000)
+
+      //       function add() {
+      //         console.log(10 + 20);
+      //       }
+      //       add()
+      //       let a = 10;
+      //       console.log("Hello");
+      //       console.log(a);
+
+      let myPromise = new Promise((resolve, reject) => {
+        let a = 0;
+        if (a > 5) {
+           console.log("resolve");
+        } else {
+          console.log("reject");
+        }
+      });
+
+      myPromise
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+    </script>
+  </body>
+</html>
