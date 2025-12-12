@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+nav{
+    background-color:rgb(72, 151, 167)
+}
+ol{
+    height:90px;
+    border: 2px solid black;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+nav>ol>li{
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    background-color:seashell;
+    padding:10px 20px;
+    border-radius:10px;
+    box-shadow: 3px 3px 5px;
+}

@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+fieldset{
+    border: 1px solid blue;
+    padding: 10px;
+    margin: 10px;
+    border-radius:20px 20px;
+    background-image: linear-gradient(to right, #67b2e4, #006079);
+}
+label{
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 10px;
+    font-style: italic;
+    width: 120px;
+}
+label::after{
+    content: "*";
+    color: red;
+}
+button{
+    background-color:rgb(83, 83, 133);
+    color: white;
+    margin: 20px;
+    padding: 8px 20px; 
+    width: 150px; 
+}
+button:hover{
+    background-color: rgb(0, 94, 255);
+    cursor: pointer;
+}
+
+.btn-container{
+    margin-top:10px;
+    display: flex;
+    justify-content: center;
+}
