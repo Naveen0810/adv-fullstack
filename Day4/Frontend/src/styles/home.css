@@ -1,0 +1,98 @@
+/* src/styles/home.css */
+
+/* make sure main content sits below your nav (adjust if your nav height differs) */
+main, .container {
+  margin-top: 28px; /* keep small gap under navbar */
+}
+
+/* ---------- Carousel ---------- */
+#mainCarousel {
+  max-width: 1200px;
+  margin: 0 auto;           /* center on large screens */
+  border-radius: 8px;
+  overflow: hidden;         /* keeps rounded corners */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* fix carousel image sizing — preserves aspect ratio and fills area */
+#mainCarousel .carousel-inner {
+  height: 420px;            /* desktop height; adjust as needed */
+}
+#mainCarousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* crop/cover behavior for different image sizes */
+  display: block;
+}
+
+/* small screens: reduce height so it doesn't dominate page */
+@media (max-width: 767px) {
+  #mainCarousel .carousel-inner { height: 220px; }
+}
+
+/* controls - bigger and more visible */
+#mainCarousel .carousel-control-prev-icon,
+#mainCarousel .carousel-control-next-icon {
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.4));
+  width: 48px;
+  height: 48px;
+  background-size: 48px 48px;
+}
+
+/* ---------- Grid ---------- */
+.image-grid {
+  max-width: 1200px;
+  margin: 26px auto 40px;
+}
+
+.image-grid .card {
+  border: none;
+  background: transparent;
+}
+
+/* keep grid images consistent height while preserving aspect */
+.image-grid .img-fluid {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* hover effect */
+.image-grid .img-fluid:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* for very small screens make grid images shorter */
+@media (max-width: 575px) {
+  .image-grid .img-fluid { height: 140px; }
+}
+
+/* spacing / alignment for section title */
+.home-title {
+  max-width: 1200px;
+  margin: 18px auto;
+  padding-left: 8px;
+}
+
+/* utility: subtle separator line between sections */
+.hr-sep {
+  max-width: 1200px;
+  margin: 12px auto 20px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.06), rgba(0,0,0,0));
+}
+
+/* small accessibility tweak: visible focus outline for carousel controls */
+#mainCarousel .carousel-control-prev:focus,
+#mainCarousel .carousel-control-next:focus {
+  outline: 3px solid rgba(0,123,255,0.25);
+  border-radius: 6px;
+}
+
+/* make sure table of contents (or page) doesn't overflow horizontally */
+body {
+  overflow-x: hidden;
+}

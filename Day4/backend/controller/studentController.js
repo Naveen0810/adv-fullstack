@@ -1,4 +1,4 @@
-// controller/studentController.js
+
 const Student = require("../model/studentmodel");
 
 const addStudent = async (req, res) => {
@@ -57,4 +57,23 @@ const deleteStudent = async (req, res) => {
   }
 };
 
-module.exports = { addStudent, getAllStudents, getStudentBasedOnId, deleteStudent };
+const updateStudent = async(req,res) =>{
+  try{
+    const updates = req.body;
+    const updatedStudent = await Student.findByIdAndUpdate(req.params.id, updates, {
+      new: true,            
+      runValidators: true,  
+      useFindAndModify: false
+    });
+    if (!updatedStudent) {
+        return res.status(404).json({ message: "User not found" });
+    }
+
+    return res.status(200).json({ message: "Student updated", student: updatedStudent });
+  } catch (err) {
+    console.error("updateStudent error:", err);
+    return res.status(500).json({ message: "Server error while updating student" });
+  }
+}
+
+module.exports = { addStudent, getAllStudents, getStudentBasedOnId, deleteStudent ,updateStudent};

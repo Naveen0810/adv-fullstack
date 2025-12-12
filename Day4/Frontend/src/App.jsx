@@ -7,8 +7,10 @@ import GetUsers from './GetUsers';
 import About from './About';
 import Contact from './Contact';
 import Nav from './Nav';
+import EditUser from './EditUser';
 import "./styles/nav.css"
 import "./styles/Register.css"
+
 
 const App = () => {
   return (
@@ -20,6 +22,7 @@ const App = () => {
         <Route path="/getUsers" element={<GetUsers />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/editUser/:id" element={<EditUser />} />
       </Routes>
     </BrowserRouter>
   );
